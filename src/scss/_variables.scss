@@ -1,2 +1,11 @@
 $violet: rgb(170, 19, 137);
 $yellow: rgb(243, 199, 23);
+
+$backgr:linear-gradient(to bottom, #227713, #419317, #61b018, #83ce17, #a8eb12);
+
+@mixin decoration {
+    font-style:italic;
+    text-decoration-line:underline;
+    text-shadow: 1px 1px 3px #a8eb12;
+    
+}

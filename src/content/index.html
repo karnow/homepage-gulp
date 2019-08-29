@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,33 +7,60 @@
     <title>Site title</title>
     <meta name="description" content="Description" />
 
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
-
+   
     <link rel="manifest" href="manifest.json" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
-
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+    <link rel="apple-touch-icon" sizes="192x192"href="assets/pwa/icons/icon-192x192.png"/>
+    <link rel="icon" type="image/png" href="assets/pwa/icons/icon-192x192.png"/>
 
     <link rel="stylesheet" href="css/main.css" />
   </head>
+  
   <body>
-    <h1>Hello world no iczego sie gapisz</h1>
+    <main class="grid">
+      <header class="header">
+              <h1 class="header__title header__title--js">O moim synku - Jakubie</h1>
+
+              <button class="header__button header__button--js">zmień terść nagłówka</button>
+      </header>
+      <article class="article">
+          <section class="flex__arange">
+                  <h2 class="naglowek naglowek__przed">Imię - historia powstania </h2>
+                  <p class="akapit">Nazwaliśmy go Jakub. Dlaczego?. Powód był bardzo prosty, mama Jakuba a moja żona wybrała je ponieważ bardzo jej się podobało te Imię. Gdyby na świat przyszła dziewczynka to wybór imienia przypadł by mnie. W grę wchodziły także inne imiona,
+                          które nam się podobały :-) np: Wiktor i Dawid. Mieszkamy w Danii więc lokalnie te imiona pisalibyśmy Victor, David i oczywiście <em>Jacob</em>.</p>
+          </section>
+
+          <section class="flex__arange flex__arange--drugi">
+                  <h2 class="naglowek naglowek__przed">Oczekiwanie </h2>
+                  <img class="image" src="assets/img/zd1.jpg" alt="w beciku">
+                  <p class="akapit">Oczekiwanie na naszego synka było długie, bo trwało aż <strong>7 lat</strong>. Najbardziej ekscytujące i zagadkowe były ostatnie miesiące kiedy jeszcze był w brzuchu mojej żony. Kręcił i wiercił się cały czas. Cały ten okres dłużył się w pewnym niepokoju czy
+                      ciąża donosi się do końca oraz czy będzie zdrowym chłopcem. Wszystkie te aspekty braliśmy pod uwagę. Czy to będzie chłopiec dowiedzieliśmy się w 18 tygodniu ciąży, gdzie położna przeprowadzając badanie USG stwierdziła że to jest chłopiec
+                      i rozwija się prawidłowo. </p>
+              </section>
+          <section class="flex__arange">
+                  <h2 class="naglowek naglowek__przed">Pobyt w szpitalu</h2>
+                  <p class="akapit">Trwał on kilka dni z racji że przyszedł na świat cesarskim cięciem. Obsługa dziecka i nasza przez personel szpitala była rewelacyjna. Czuliśmy się jak w hotelu a nie jak w szpitalu. Mieliśmy dostęp do wszelkiego rodzaju asortymentu higienicznego i pielęgnacyjnego oraz stołówkę z pysznym jedzeniem zaraz przy wejsciu do sali gdzie zostaliśmy ulokowani. 
+                      </p>
+              </section>
+
+      </article>
+      <nav class="navigation">
+          <button class="navigation__switcher navigation__switcher--js">&#9776</button>
+      
+          <ul class="navigation__list navigation__list--js">
+              <li class="navigation__item"><a class="navigation__link" href="#">onet</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#">wp</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#">interia</a></li>
+          </ul>
+      </nav>
+      <footer class="footer">
+          <div class="prov about__div--js"></div>
+          <p>&copy Wszystkie prawa zastrzeżone @ Karol</p>
+      </footer>
+
+  <div class="grid__item"></div>
+  </main> 
+
 
     <script src="js/main.js"></script>
   </body>

@@ -3,6 +3,7 @@
 
 
 html {
+  font-family:'Comic Sans MS';
   box-sizing: border-box;
 }
 
@@ -10,7 +11,176 @@ html {
   box-sizing: inherit;
 }
 
+
+
 body {
-  color: $yellow;
-  background: $violet;
+  background-image: $backgr;
+  //color: $yellow;
+ // background: $violet;
+}
+
+.grid {
+    display:grid;
+    grid-template-areas: "header header header"
+    "content . menu" 
+    "footer footer footer";
+    grid-template-columns: [pierwsza] 1fr [druga] 50px [trzecia] 200px [czwarta];
+    grid-template-rows: 100px auto 100px;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+&__item {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start:pierwsza;
+    grid-column-end:span 2;
+    z-index: -1;
+
+}}
+
+.header {
+    grid-area: header;
+    text-align: center;   
+&__title{
+    margin-bottom: 10px;
+&--red {
+    color:darkred;
+}}}
+
+.article {
+    grid-area: content;
+    display: flex;
+    border: solid 1px black;
+    flex-flow: column wrap;
+    padding: 2px;
+    }
+
+.flex__arange {
+    
+    border: solid 1px red; 
+    margin:2px;
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.navigation {
+    grid-area: menu;
+
+&__list{
+    flex-direction: row;
+    list-style: none;
+    padding:0;
+    display: flex;
+    justify-content: center;
+}
+&__item {
+     margin: 0 16px;
+}}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.image {
+    float:left;
+    width: 100px;
+    height: 178px;
+    margin-left:10px;
+    margin-bottom:10px;
+    margin-right: 3px;
+    border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+    border: 5px dotted orange;
+   
+}
+
+.flex__arange--drugi {
+   
+    
+}
+
+//rodzc w scss &
+.akapit{
+    text-align: justify;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+    text-indent: 20px; /*wcięcie*/
+&:first-letter{
+    font-size: 200%;
+}}
+
+
+
+.naglowek{
+    padding: 1px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    @include decoration; //wywołanie funcji mixin w scss
+&__przed::before{
+    content:"  ";
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    margin-right:5px;
+    background:yellow;
+}
+&__przed::after{
+    content:"  ";
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    margin-left:5px;
+    background:red;
+}}
+
+
+@media (min-width:661px) {
+
+    .main {
+        max-width:900px;
+    }
+    .navigation__switcher {
+        display:none;
+    }
+}
+
+
+@media (max-width:660px) {
+
+    .navigation__switcher {
+        margin-top: 10px;
+    }
+        
+ 
+    .navigation__list {
+        
+        flex-direction: column;
+        display:none;
+        //width:200px;
+        
+    }
+    .navigation__list--visible {
+        display:flex;
+        background-image: $backgr;
+    
+    }
+    .navigation__item {
+        margin: 16px;
+    }
+    .navigation__switcher {
+        border:none;
+        background:none;
+    }
+    .grid {
+        display:grid;
+        
+        grid-template-columns: 1fr;
+
+        grid-template-rows: 50px 100px auto 100px;
+        grid-template-areas: "menu" "header" "content" "footer";
+        grid-column-gap: 0px;
+    }
 }
