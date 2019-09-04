@@ -16,21 +16,13 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
-// buton zmieniający nagłówek
-const button=document.getElementById('nag');
+// buton zmieniający nagłówek inny sposob
 
+document.getElementById('demo').onclick = function changeContent() {
 
-button.addEventListener('click', changeColor('red')) ;
-  
-
-function changeColor(newColor) {
-  let elem = document.getElementById('nag');
-  elem.style.color = newColor;
-  
-
-}
-
-
+  document.getElementById('nag').innerHTML = "Help me";
+  document.getElementById('nag').style = "Color: red";
+} 
 
 
 //wpis do diva
