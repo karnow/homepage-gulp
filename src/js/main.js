@@ -17,16 +17,22 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 // buton zmieniający nagłówek
-const button=document.querySelector('.header__button--js');
-console.log(button);
+const button=document.getElementById('nag');
 
-button.addEventListener('click', (e) => {
-    const header= document.querySelector('.header__title--js');
-    header.innerHTML='I Nie tylko o nim';
-    header.classList.toggle('header__title--red');
-    console.log(e);
 
-}); 
+button.addEventListener('click', changeColor('red')) ;
+  
+
+function changeColor(newColor) {
+  let elem = document.getElementById('nag');
+  elem.style.color = newColor;
+  
+
+}
+
+
+
+
 //wpis do diva
 let name='karol nowakowski';
 let b=5;
