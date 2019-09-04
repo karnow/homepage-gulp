@@ -6,6 +6,8 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -309,13 +311,16 @@ template {
   display: none; }
 
 html {
-  font-family: 'Comic Sans MS';
+  font-family: 'Indie Flower';
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
+
+h1, h2 {
+  font-family: 'Libre Baskerville'; }
 
 body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#227713), color-stop(#419317), color-stop(#61b018), color-stop(#83ce17), to(#a8eb12));

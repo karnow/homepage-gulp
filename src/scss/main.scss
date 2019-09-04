@@ -1,16 +1,19 @@
 @import "_normalize";
 @import "_variables";
-
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
 html {
-  font-family:'Comic Sans MS';
+  font-family:'Indie Flower';
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+h1, h2 {
+    font-family: 'Libre Baskerville';
+}
 
 
 body {
