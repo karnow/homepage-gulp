@@ -63,3 +63,52 @@ navigationSwitcher.addEventListener('click', (e) => {
     navigationList.classList.toggle('navigation__list--visible');
 
 });  
+//=====================================================================================
+const person={
+  name:'karol',
+  age:43
+}
+//wpiesywanie obiektu do localstorage za pomoca json'a ->z kompresja do stringa
+const jsonPerson=JSON.stringify(person);
+console.log(jsonPerson);
+//wysyła ie do localStorage
+localStorage.setItem('person',jsonPerson);
+
+//pobieranie z localstorage
+console.log(localStorage.getItem('person'));
+const personString=localStorage.getItem('person');
+const newperson=JSON.parse(personString);
+console.log(newperson);
+//------------------------------------------------------------------
+
+const focusInput=document.querySelector('.focus--js');
+
+//if(localStorage.getItem('focusInput')) {
+ // focusInput.value=localStorage.getItem('focusInput');
+//}
+
+focusInput.addEventListener('keyup', (e)=> {
+  
+  localStorage.setItem('focusInput', e.target.value);
+});
+
+
+
+//Edytor
+
+const message = document.querySelector('.form__message--js');
+const load = document.querySelector('.form__button--load--js');
+const save = document.querySelector('.form__button--save--js');
+
+save.addEventListener('click', (e) => {
+ e.preventDefault();
+ localStorage.setItem('message', message.value);
+});
+
+load.addEventListener('click', (e) => {
+e.preventDefault();
+ message.value=localStorage.getItem('message');
+});
+
+
+
